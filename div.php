@@ -42,7 +42,7 @@
     <div class="formulaire">
 
         <div class="item1">
-                <form name="form" method="POST" action="grid.php?submit=1">
+                <form name="form" method="POST" action="div.php?submit=1">
                     <label for="email" class="label">Email</label>
         </div>
 
