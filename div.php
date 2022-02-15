@@ -14,7 +14,7 @@
 
     <div class="header">
 
-        <h1>Formulaire validation Email</h1>
+        <h1>FORMULAIRE VALIDATION EMAIL</h1>
 
     </div>
 
@@ -41,43 +41,36 @@
 
     <div class="formulaire">
 
-    <div class="item1">
-    
-            <form name="form" method="POST" action="div.php?submit=1">
-       
-                    <label for="email" class="label">Email</label> 
-
-    </div>
-    <div class="item2">
-                    <input type="text" name="email" placeholder="tapez votre Email" id="text"> 
-    </div>          
-            <br>
-            
-
-    <div class="item3">       
-            <button type="submit" name="submit" value="submit" class="bouton" onclick="return valider()">Submit</button>
-            
-        </form>
- 
-    </div> 
-
-    <div class="item4"></div>
-    <div class="item5"></div>
-    <div class="item6">
-
-                <?php
-                if (isset($_POST['submit'])){
-
-                echo "L'email ".$_POST['email']." est valide!";      
-        
-            }
-                ?>
-            
-
-    </div>
-
-
+        <div class="item1">
+                <form name="form" method="POST" action="grid.php?submit=1">
+                    <label for="email" class="label">Email</label>
         </div>
+
+        <div class="item2">
+                <input type="text" name="email" placeholder="Tapez votre Email" class="input">     
+        </div>          
+            
+        <div class="item3"></div> 
+
+ 
+        <div class="item4">
+                <button type="submit" name="submit" value="submit" class="bouton" onclick="return valider()">Submit</button>
+        </div>
+
+        <div class="item5"></div>
+
+        <div class="item6">
+    
+            <?php
+                if (isset($_POST['submit'])){
+                echo "L'email ".$_POST['email']." est valide!";      
+                            }
+                        ?>
+        </div>
+
+
+
+    </div>
 
 
 
@@ -91,7 +84,7 @@
         .header{
             width:100%;
             height:120px;
-            background:#FFE;
+            background:black;
             color:blue;
             display:flex;
             justify-content:center;
@@ -99,55 +92,61 @@
         }
 
         h1{
-            color:blue;
+            color:white;
             font-family: 'Lato', sans-serif;
         }
 
+        .label{
+            font-size:18px;
+            font-family:arial;
+        }
+
+        .input{
+            width: 150px;
+            height: 25px;
+            border: solid 1px black;
+            font-size:12px;
+            text-align:center;
+        
+        }
+
         .formulaire{
-            width:600px;
-            height:100px;
-          /*  border:solid 1px black; */
+            width:500px;
+            height: 90px;
             margin:auto;
+            margin-top:30px;
             display:grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 30% 70%;
+            grid-column-gap: 2px;
         }
 
         .item1{
             text-align:right;
         }
 
-        /*
-        .item1{
-            grid-column:1/2;
-            grid-row:1/2;
-        }
-        .item2{
-            grid-column:2/3;
-            grid-row:2/3;
-        }
-        .item3{
-            grid-column:3/4;
-            grid-row:3/4;
-        }
-        .item4{
-            grid-column:4/5;
-            grid-row:4/5;
-        }
-        .item5{
-            grid-column:5/6;
-            grid-row:5/6;
-        }
         .item6{
-            grid-column:6/7;
-            grid-row:6/7;
+            font-family: 'Lato', sans-serif;
+            color:red;
         }
 
-      */
+        .bouton{
+            width:150px;
+            height:25px;
+            font-size:15px;
+            border: solid 1px black;
+            background-color:#FFF;
+        }
+
+        .bouton:hover{
+            background-color:black;
+            color:white;
+            transition:1s;
+            cursor:pointer;
+        }
 
     </style>
 
 
 
-</body>
+    </body>
 </html>
