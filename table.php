@@ -74,8 +74,7 @@
                     <td></td>
                     <td> <button type="submit" name="submit" value="submit" class="bouton" onclick="return valider()">Submit</button></td>
                 </tr>
-        </form>
-    </div>
+        
 
 
                 <tr>
@@ -93,7 +92,8 @@
                 </tr>
     </table>
 
-
+</form>
+    </div>
 
 </body>
 </html>
